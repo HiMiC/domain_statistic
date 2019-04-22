@@ -37,7 +37,13 @@
 * docker-compose up -d
 
 
-crontab task for runner
+* docker-compose exec mysql bash
+* docker-compose exec recurcer bash
+* docker-compose exec runner bash
+
+
+##### crontab task for runner
+Чтобы понимать почему изначально база пустая и знать когда она наполнится
 ~~~~
 # каждые 15 дней в 1 час 10 мин
 10 1 */15 * * /usr/bin/python /home/domain_statistic/update_as_info.py >> /home/domain_statistic/download/update_as_info.log
