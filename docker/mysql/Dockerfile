@@ -19,8 +19,9 @@ RUN \
   echo "deb-src http://repo.percona.com/apt xenial main" >> /etc/apt/sources.list.d/percona.list && \
   apt-get update && \
   apt-get install -y percona-server-server-5.6 percona-server-client-5.6 && \
-  apt-get install -y locales git htop vim wget && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get install -y locales git htop vim wget mc && \
+  apt-get clean && \
+  rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*;
 
 # fix locales
 ADD config/locales /var/lib/locales/supported.d/local
@@ -35,7 +36,7 @@ RUN addgroup --gid 950 mysql || true
 RUN adduser --quiet --system --disabled-login --no-create-home --uid 950 --gid 950  mysql || true
 
 RUN cd /root/ && \
-    git clone -n https://github.com/akmua/domain_statistic.git --depth 1 && \
+    git clone -n https://github.com/himic/domain_statistic.git --depth 1 && \
     cd domain_statistic && \
     git checkout HEAD structure.sql && \
     cp /root/domain_statistic/structure.sql /root/structure.sql && \

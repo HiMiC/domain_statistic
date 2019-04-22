@@ -15,6 +15,7 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   apt-get install --no-install-recommends -qq -y build-essential pdns-recursor && \
+  apt-get install mc && \
   mkdir -p /etc/minit && \
   apt-get clean && \
   rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*;

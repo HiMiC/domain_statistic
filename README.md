@@ -1,4 +1,7 @@
 # Статистика доменов
+
+Взято из форка https://github.com/akmua/domain_statistic
+
 Скрипт для сбора статистики для зон ru/su/rf. Собираются все записи c DNS, 
 Автономная система, переод делегирования
 
@@ -22,7 +25,7 @@
 Скачиваем репозиторий
 
 * cd /home
-* git clone https://github.com/akmua/domain_statistic.git
+* git clone https://github.com/himic/domain_statistic.git
 
 Собираем образы
 
