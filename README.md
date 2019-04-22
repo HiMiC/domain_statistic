@@ -17,24 +17,26 @@
 
 # Пример запуска:
 
-устанавливаем Docker и git
+#### устанавливаем Docker и git
 
 * sudo apt-get update 
 * sudo apt-get install docker.io git
 
-Скачиваем репозиторий
+#### Скачиваем репозиторий
 
 * cd /home
 * git clone https://github.com/himic/domain_statistic.git
 
-Собираем образы
+#### Собираем образы
 
 * cd domain_statistic/docker
 * docker-compose build
 
-запускаем контейнеры
+####запускаем контейнеры
 
 * docker-compose up -d
+
+
 
 
 * docker-compose exec mysql bash
@@ -42,7 +44,7 @@
 * docker-compose exec runner bash
 
 
-##### crontab task for runner
+#### crontab task for runner
 Чтобы понимать почему изначально база пустая и знать когда она наполнится
 ~~~~
 # каждые 15 дней в 1 час 10 мин
