@@ -13,12 +13,11 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
+  apt-get install -y byobu curl git htop man unzip vim wget mc && \
   apt-get install --no-install-recommends -qq -y build-essential pdns-recursor && \
-  apt-get install mc && \
   mkdir -p /etc/minit && \
   apt-get clean && \
-  rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*;
+  rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 ADD install_minit.sh /usr/local/sbin/install_minit.sh
 RUN /bin/bash /usr/local/sbin/install_minit.sh

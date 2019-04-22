@@ -37,6 +37,14 @@
 * docker-compose up -d
 
 
-Далее каждую ночь база данных доменов будет обновляться. На двух 
-процессорах E5-2620v3 с 32 гигабайтами памяти процесс обновления БД з
-анимает 11-12 часов, плюс еще несколько часов агрегирование данных.
+crontab task for runner
+~~~~
+# каждые 15 дней в 1 час 10 мин
+10 1 */15 * * /usr/bin/python /home/domain_statistic/update_as_info.py >> /home/domain_statistic/download/update_as_info.log
+# каждый день в 0 часов 5 минут
+5 0 * * * /usr/bin/python /home/domain_statistic/update_domain.py -n `cat /etc/resolv.conf | awk '{print $2}'` -u >> /home/domain_statistic/download/update_domain.log
+# каждый день в 12 часов дня и 30 минут
+30 12 * * * /usr/bin/python /home/domain_statistic/update_regru.py >> /home/domain_statistic/download/update_regru.log
+# Каждые 30 дней в 10 часов 1 минуту
+1 10 */30 * * /usr/bin/python /home/domain_statistic/normalization.py
+~~~~
