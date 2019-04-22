@@ -18,6 +18,7 @@ RUN \
                     python-all-dev python-subnettree \
                     python-mysqldb python-psutil && \	
   apt-get update && apt-get install -y python-pip mc && \
+  pip install --upgrade pip &&\
   pip install dnspython && \
   pip install --upgrade psutil && \		
   apt-get clean && \
