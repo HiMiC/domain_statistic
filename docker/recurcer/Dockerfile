@@ -13,7 +13,7 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget mc && \
+  apt-get install -y byobu curl git htop man unzip vim wget mc net-tools && \
   apt-get install --no-install-recommends -qq -y build-essential pdns-recursor && \
   mkdir -p /etc/minit && \
   apt-get clean && \

@@ -16,11 +16,13 @@ RUN \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   apt-get install --no-install-recommends -qq -y git build-essential cron libpython2.7 python-minimal\
                     python-all-dev python-subnettree \
-                    python-mysqldb python-psutil && \	
-  apt-get update && apt-get install -y python-pip zlib1g-dev libbz2-dev mc && \
-  pip install --upgrade pip &&\
+                    python-mysqldb python-psutil && \
+  apt-get update && \
+  apt-get install -y zlib1g-dev libbz2-dev python-dev libmysqlclient-dev mc net-tools && \
+  wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm get-pip.py && \
   pip install dnspython && \
-  pip install --upgrade psutil && \		
+  pip install psutil && \
+  pip install MySQL-python && \
   apt-get clean && \
   rm -rf /etc/localtime && \
   ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime && \

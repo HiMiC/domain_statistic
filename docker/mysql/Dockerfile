@@ -19,7 +19,7 @@ RUN \
   echo "deb-src http://repo.percona.com/apt xenial main" >> /etc/apt/sources.list.d/percona.list && \
   apt-get update && \
   apt-get install -y percona-server-server-5.6 percona-server-client-5.6 && \
-  apt-get install -y locales git htop vim wget mc && \
+  apt-get install -y locales git htop vim wget mc net-tools && \
   apt-get clean && \
   rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*;
 
