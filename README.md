@@ -56,3 +56,9 @@
 # Каждые 30 дней в 10 часов 1 минуту
 1 10 */30 * * /usr/bin/python /home/domain_statistic/normalization.py
 ~~~~
+
+#### MySQL
+пароль с root правами /etc/mysql/debian.cnf
+pma:pma
+domain_statistic:domain_statistic
+
