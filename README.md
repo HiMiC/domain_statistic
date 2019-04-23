@@ -30,7 +30,7 @@
 #### Собираем образы
 
 * cd domain_statistic/docker
-* docker-compose build
+* docker-compose build --no-cache
 
 ####запускаем контейнеры
 
