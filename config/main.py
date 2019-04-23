@@ -17,7 +17,7 @@ DEFAULT_TIMEOUT = 3.0
 MYSQL_HOST = 'db'
 MYSQL_PORT = 33060
 MYSQL_USER = 'domain_statistic'
-MYSQL_PASSWD = 'domain_statisticdomain_statistic'
+MYSQL_PASSWD = 'domain_statistic'
 MYSQL_DATABASE = 'domain_statistic'
 
 COUNT_THREAD = 180
