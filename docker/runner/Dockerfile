@@ -17,7 +17,7 @@ RUN \
   apt-get install --no-install-recommends -qq -y git build-essential cron libpython2.7 python-minimal\
                     python-all-dev python-subnettree \
                     python-mysqldb python-psutil && \	
-  apt-get update && apt-get install -y python-pip mc && \
+  apt-get update && apt-get install -y python-pip zlib1g-dev libbz2-dev mc && \
   pip install --upgrade pip &&\
   pip install dnspython && \
   pip install --upgrade psutil && \		
