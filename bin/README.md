@@ -10,6 +10,7 @@ Site http://www.ris.ripe.net/source/bgpdump/
     mkdir /opt/libbgpdump/bin
     mkdir /opt/libbgpdump/includes
     mkdir /opt/libbgpdump/lib
+    ./configure
     make
     cp libbgpdump.so /opt/libbgpdump/lib
     cp bgpdump /opt/libbgpdump/bin
