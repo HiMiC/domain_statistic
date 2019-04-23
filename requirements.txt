@@ -1,5 +1,6 @@
 # python modules
-MySQLdb
+#MySQLdb
+MySQL-python
 dnspython
 SubnetTree
 psuntil >= 2.2
